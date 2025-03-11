@@ -1,0 +1,147 @@
+/* Basisopmaak voor de pagina */
+body {
+    font-family: 'Garamond', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.8;
+}
+
+/* Header styling */
+header {
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Hoofdinhoud sectie */
+main {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;  /* Use flex-start to align the items from the top */
+    flex-flow: row wrap;  /* 'row wrap' allows wrapping sections into the next line */
+    padding: 2em;
+    margin: 0;
+}
+
+/* Secties met titels en tekst */
+section {
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    
+    width: 40%;
+    padding: 2em;
+
+    background-color: #1d1d1d;
+    margin: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 8px;
+
+    scale: auto;
+    transition: all ease 1s;
+}
+
+section:hover {
+    overflow: hidden;
+    scale: 102%;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 5vw;
+    padding-top: 0;
+    padding-bottom: 0;
+    bottom: 0;
+    height: fit-content;
+}
+
+/* Verbeteringen voor leesbaarheid */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section div {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+
+    width: auto;
+    height: 20em;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+section img {
+    width: auto;
+    height: auto;
+}
+
+audio {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack the sections vertically */
+        align-items: center; /* Center the sections horizontally */
+    }
+
+    section {
+        width: 80%; /* Make sections wider on small screens */
+        margin: 1em 0; /* Reduce margin between sections */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    section > div {
+        flex-direction: row; /* Stack the images vertically */
+        width: 100%;
+        height: 20%; /* Allow the images to stack and not be constrained */
+    }
+
+    section img {
+        width: 40%; /* Make the images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
